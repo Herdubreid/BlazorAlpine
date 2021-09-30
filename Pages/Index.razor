@@ -1,0 +1,31 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<h3>Alpine Dropdown</h3>
+
+<h4>From Example</h4>
+<div x-data="{ open: false }">
+    <button @click="open = ! open">Toggle Content</button>
+ 
+    <div x-show="open">
+        Content...
+    </div>
+</div>
+
+<h4>With Blazor Tag</h4>
+<div x-data="{ open: false }">
+    <button @click="open = ! open">Toggle Content</button>
+ 
+    <div x-show="open">
+        @Content
+    </div>
+</div>
+
+@code {
+    string Content { get; set; } = "Content...";
+}
